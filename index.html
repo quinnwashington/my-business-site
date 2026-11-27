@@ -76,6 +76,22 @@ nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-b
 .contact-card a:hover{text-decoration:underline}
 footer{border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;padding-top:26px;padding-bottom:26px}
+.steps{display:flex;flex-wrap:wrap;gap:28px;margin-top:40px}
+.step{flex:1 1 260px;min-width:0;border-top:3px solid var(--copper);padding-top:18px}
+.step b{display:block;font-family:'Archivo',system-ui,sans-serif;font-size:14px;font-weight:700;letter-spacing:0.08em;color:var(--copper);margin-bottom:6px}
+.step h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.step p{color:var(--muted);font-size:16px}
+.faq{display:flex;flex-direction:column;gap:28px}
+.faq h3{font-size:21px;font-weight:700;margin-bottom:6px}
+.faq p{color:var(--muted);font-size:16px}
+.callbar{display:none}
+@media (max-width:700px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .callbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));background:var(--navy);box-shadow:0 -4px 16px rgba(15,42,63,0.25)}
+  .callbar a{flex:1;text-align:center;text-decoration:none;font-weight:600;border-radius:8px;padding:14px 10px;font-size:17px}
+  .callbar .call{background:var(--copper);color:#fff}
+  .callbar .mail{border:2px solid #fff;color:#fff;padding:12px 10px}
+}
 @media (prefers-reduced-motion:no-preference){.btn{transition:background .15s ease,color .15s ease}}
 </style>
 </head>
@@ -135,7 +151,19 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 2
 </div>
 </section>
 
-<section class="section" id="areas">
+<section class="section" id="how">
+<div class="wrap">
+<h2>How it works</h2>
+<p class="intro">Getting help is simple, whether it is an emergency or a planned project.</p>
+<div class="steps">
+<div class="step"><b>STEP 1</b><h3>Call or email</h3><p>Tell us what is going on. For emergencies, we are on call 24/7.</p></div>
+<div class="step"><b>STEP 2</b><h3>Get a free estimate</h3><p>We look at the job and explain what needs doing before any work starts.</p></div>
+<div class="step"><b>STEP 3</b><h3>We do the work</h3><p>Our licensed team gets the job done and leaves things tidy.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section band" id="areas">
 <div class="wrap cols">
 <div class="col">
 <h2>Where we work</h2>
@@ -162,7 +190,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 2
 </div>
 </section>
 
-<section class="section band about" id="about">
+<section class="section about" id="about">
 <div class="wrap cols">
 <div class="col">
 <h2>A family business with decades of experience</h2>
@@ -170,6 +198,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 2
 <div class="col">
 <p>Baker Plumbing &amp; Renovations is a family-owned company with more than 30 years in the trade. Our team includes Red Seal plumbers and gas fitters, so the work is done properly the first time.</p>
 <p>When something goes wrong at home, you want a real person to answer. Call us any time for an emergency, or ask for a free estimate on your next project.</p>
+</div>
+</div>
+</section>
+
+<section class="section band" id="faq">
+<div class="wrap cols">
+<div class="col"><h2>Common questions</h2></div>
+<div class="col faq">
+<div><h3>Do you offer free estimates?</h3><p>Yes. Call or email us and we will arrange a free estimate for your job.</p></div>
+<div><h3>Can I call you for an emergency?</h3><p>Yes. We are on call 24/7 for plumbing emergencies. Call 250-748-3890.</p></div>
+<div><h3>Which areas do you serve?</h3><p>Duncan and the Cowichan Valley, including Chemainus, Ladysmith, Crofton, Lake Cowichan, Cobble Hill, Cowichan Bay, Mill Bay, Shawnigan Lake, Honeymoon Bay, Saltair and Youbou, plus Victoria and Nanaimo.</p></div>
+<div><h3>What kinds of jobs do you take on?</h3><p>Plumbing and hot water tanks, boilers and heating, pumps and well systems, gas lines, bathroom renovations, excavation and drainage.</p></div>
 </div>
 </div>
 </section>
@@ -198,6 +238,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 2
 <p>Duncan, British Columbia · Serving the Cowichan Valley, Victoria and Nanaimo</p>
 </div>
 </footer>
+
+<div class="callbar">
+<a class="call" href="tel:+12507483890">Call now</a>
+<a class="mail" href="mailto:bakerplumbing@shaw.ca?subject=Free%20estimate%20request">Free estimate</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Plumber","name":"Baker Plumbing & Renovations","telephone":"+1-250-748-3890","email":"bakerplumbing@shaw.ca","address":{"@type":"PostalAddress","addressLocality":"Duncan","addressRegion":"BC","postalCode":"V9L 6Y8","addressCountry":"CA"},"areaServed":["Duncan","Chemainus","Ladysmith","Crofton","Lake Cowichan","Cobble Hill","Cowichan Bay","Mill Bay","Shawnigan Lake","Honeymoon Bay","Saltair","Youbou","Victoria","Nanaimo"]}
+</script>
 
 </body>
 </html>
